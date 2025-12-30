@@ -33,6 +33,8 @@ Ansible Control Node manages multiple EC2 instances using SSH.
 ```bash
 ansible-playbook playbooks/site.yml
 
+## Project Structure
+
 rhce-enterprise-automation-ansible-aws/
 │
 ├── README.md
