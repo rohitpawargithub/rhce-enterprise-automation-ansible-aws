@@ -1,0 +1,4 @@
+- Launch RHEL EC2 instances
+- Configure security group (SSH + HTTP)
+- Attach extra EBS volume for LVM
+- Enable passwordless SSH
