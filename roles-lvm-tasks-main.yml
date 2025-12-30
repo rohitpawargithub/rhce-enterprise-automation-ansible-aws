@@ -1,0 +1,22 @@
+- name: Create volume group
+  lvg:
+    vg: vgdata
+    pvs: /dev/xvdb
+
+- name: Create logical volume
+  lvol:
+    vg: vgdata
+    lv: lvweb
+    size: 5g
+
+- name: Format filesystem
+  filesystem:
+    fstype: xfs
+    dev: /dev/vgdata/lvweb
+
+- name: Mount filesystem
+  mount:
+    path: /webdata
+    src: /dev/vgdata/lvweb
+    fstype: xfs
+    state: mounted
