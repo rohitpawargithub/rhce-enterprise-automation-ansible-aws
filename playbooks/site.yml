@@ -1,0 +1,16 @@
+- hosts: all
+  become: yes
+  roles:
+    - users
+
+- hosts: web
+  become: yes
+  roles:
+    - webserver
+    - firewall
+    - lvm
+
+- hosts: backup
+  become: yes
+  roles:
+    - users
