@@ -32,3 +32,41 @@ Ansible Control Node manages multiple EC2 instances using SSH.
 ## ▶️ How to Run
 ```bash
 ansible-playbook playbooks/site.yml
+
+rhce-enterprise-automation-ansible-aws/
+│
+├── README.md
+├── ansible.cfg
+│
+├── inventory/
+│   └── aws_hosts.ini
+│
+├── playbooks/
+│   ├── site.yml
+│   ├── users.yml
+│   ├── webserver.yml
+│   ├── lvm.yml
+│   ├── firewall_selinux.yml
+│   └── backup.yml
+│
+├── roles/
+│   ├── users/
+│   │   └── tasks/main.yml
+│   │
+│   ├── webserver/
+│   │   ├── tasks/main.yml
+│   │   ├── handlers/main.yml
+│   │   └── templates/index.html.j2
+│   │
+│   ├── lvm/
+│   │   └── tasks/main.yml
+│   │
+│   ├── firewall/
+│   │   └── tasks/main.yml
+│
+├── aws/
+│   └── ec2-setup.md
+│
+└── screenshots/
+    └── (add execution proof)
+
