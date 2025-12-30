@@ -1,0 +1,11 @@
+- name: Allow HTTP
+  firewalld:
+    service: http
+    permanent: yes
+    state: enabled
+    immediate: yes
+
+- name: Enable SELinux enforcing
+  selinux:
+    policy: targeted
+    state: enforcing
