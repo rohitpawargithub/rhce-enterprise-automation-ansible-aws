@@ -1,0 +1,11 @@
+- name: Create devops group
+  group:
+    name: devops
+
+- name: Create users
+  user:
+    name: "{{ item }}"
+    groups: devops
+  loop:
+    - devuser
+    - opsuser
